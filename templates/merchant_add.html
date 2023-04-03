@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merchant Add To Store</title>
+</head>
+
+<body>
+    <h1>Add Item To Store</h1>
+
+    <form action="{{ url_for('merchant_add')}}" method="post">
+        Username/email: <br>
+        <input type="text" name="username" placeholder="Username/Email"> <br><br>
+        Flower type: <br>
+        <input type="text" name= "flowertype" placeholder="Flower type"> <br><br>
+        Flower arrangement: <br>
+        <input type="text" name= "flowerarrangement" placeholder="Flower arrangement"> <br><br>
+        Price: <br>
+        <input type="text" name= "price" placeholder="Price"> <br><br>
+        Shop name: <br>
+        <input type="text" name= "shopname" placeholder="Shop name"> <br><br>
+        Unique item code (8, 9 or 10 digits): <br>
+        <input type="text" name= "code" placeholder="Code (8, 9 or 10 digits)"> <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form> <br><br>
+
+
+
+</body>

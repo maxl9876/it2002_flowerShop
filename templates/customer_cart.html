@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Cart</title>
+</head>
+
+<body>
+    <h1>Your cart</h1>
+
+    <table border = 1>
+      <thead>
+          <td><b>Code</b></td>
+          <td><b>Name of Shop</b></td>
+          <td><b>Flower Type</b></td>
+          <td><b>Flower Arrangement</b></td>
+          <td><b>Price</b></td>
+      </thead>
+      
+      
+      
+      {% for row in result %}
+  
+      <tr>
+         <td> {{ row[0] }} </td> 
+         <td> {{ row[4] }} </td>
+         <td> {{ row[1] }} </td>
+         <td> {{ row[2] }} </td>
+         <td> {{ row[3] }} </td>
+      </tr>
+  
+      {% endfor %}
+   </table> <br><br><br>
+
+
+
+    The 'Proceeed to payment' button is to make this website more realistic. <b>Clicking this button will not do anything.</b> <br>
+    <button>Proceed to payment</button>
+
+</body>
+
+
+
+
+
+
+

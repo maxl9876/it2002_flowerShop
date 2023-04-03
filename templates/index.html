@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+</head>
+
+<body>
+    
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{message}}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    {% endwith %}
+    
+    <h1>Log In</h1>
+
+    <h2> Welcome to the Flower Shop! </h2>
+
+    <form action="{{ url_for('branch')}}" method="post">
+        Please enter your username/email<br>
+        <input type="text" name="username" placeholder="Username/Email"> <br><br>
+        
+        Please select either <b>customer</b> or <b>merchant</b> <br>
+        <label for="customer">customer</label>
+        <input type ="radio" id ="customer" name="type_of_user" value="customer"> <br><br>
+        
+        <label for="merchant">merchant</label>
+        <input type ="radio" id ="merchant" name="type_of_user" value="merchant">
+        <br><br>
+
+        <input type = "submit" value = "Login">
+
+    </form> <br><br><br>
+
+    <b>Create an account here!</b> <br><br>
+
+    <form action="{{ url_for('signup')}}" method="post">
+        Are you a customer or a merchant? <br>
+        <label for="customer">customer</label>
+        <input type ="radio" id ="customer" name="type_of_user" value="customer"> <br><br>
+        
+        <label for="merchant">merchant</label>
+        <input type ="radio" id ="merchant" name="type_of_user" value="merchant">
+        <br><br>
+
+        <input type = "submit" value = "Signup">
+
+    </form>
+
+
+
+
+
+</body>

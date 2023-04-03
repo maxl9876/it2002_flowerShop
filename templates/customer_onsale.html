@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer On Sale</title>
+</head>
+
+<body>
+    <h1>Here is the result of your search</h1>
+
+    <table border = 1>
+        <thead>
+            <td><b>Code</b></td>
+            <td><b>Name of Shop</b></td>
+            <td><b>Flower Type</b></td>
+            <td><b>Flower Arrangement</b></td>
+            <td><b>Price</b></td>
+        </thead>
+        
+        
+        
+        {% for row in result %}
+    
+        <tr>
+           <td> {{ row[0] }} </td> 
+           <td> {{ row[4] }} </td>
+           <td> {{ row[1] }} </td>
+           <td> {{ row[2] }} </td>
+           <td> {{ row[3] }} </td>
+        </tr>
+    
+        {% endfor %}
+     </table> <br><br><br>
+
+     <b>Add an item to your cart here!</b> <br><br>
+     <form action="{{ url_for('add_to_cart')}}" method="post">
+         Please enter your username/email to add an item to your cart<br>
+         <input type="text" name="username" placeholder="Username/Email"> <br><br>
+ 
+         Please enter the code of this item(the digits on the left) <br>
+         <input type="text" name="code" placeholder="Code (8, 9 or 10 digits)"> <br><br>
+ 
+         Please enter a unique transaction indentifier(9 digits) <br>
+         <input type="text" name="identifier" placeholder="Code (9 digits)"> <br><br>
+ 
+         Please enter the date in this format: <b>YYYY/MM/DD</b> <br>
+         <input type="text" name="date" placeholder="Date"> <br><br>
+         <button type="submit">Submit</button> <br><br>
+ 
+ 
+     </form> <br><br>
+    
+
+
+
+</body>
+
+

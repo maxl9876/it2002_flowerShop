@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Filter</title>
+</head>
+
+<body>
+    <h1>The Flower Shop :)</h1>
+
+    <h2>What would you like to purchase?</h2>
+
+    <form action="{{ url_for('filter')}}" method="post">
+        Please enter the type of flower that you are looking for<br>
+        <input type="text" name="flowertype" placeholder="Type of flower"> <br><br>
+
+        Please enter the flower arrangement that you are looking for<br>
+        <input type="text" name="flowerarrangement" placeholder="Flower arrangement"> <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form> <br><br>
+
+    
+    <b>Go to your cart here!</b> <br><br>
+
+    <form action="{{ url_for('to_cart')}}" method="post">
+      Please enter your username/email to access your cart<br>
+      <input type="text" name="username" placeholder="Username/Email"> <br><br>
+
+      
+      <button type="submit">Submit</button>
+
+  </form> <br><br>
+    
+
+
+</body>

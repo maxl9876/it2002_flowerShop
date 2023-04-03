@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Sign Up</title>
+</head>
+
+<body>
+  
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+    <h1>Customer Sign Up</h1>
+
+    <form action="{{ url_for('customer_signup')}}" method="post">
+        Username/email: <br>
+        <input type="text" name="username" placeholder="Username/Email"> <br><br>
+        First name: <br>
+        <input type="text" name= "firstname" placeholder="First name"> <br><br>
+        Last name: <br>
+        <input type="text" name= "lastname" placeholder="Last name"> <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form> <br><br>
+
+
+
+</body>
+
+
